@@ -3,7 +3,7 @@ from openerp import tools
 
 class item_details(osv.osv):
     _name = 'item.details'
-    def _get_image(self, cr, uid, ids, name, args, context=None):
+    def _get_image(self, cr, uid, ids, name, args, context=None):jgjjh
         result = dict.fromkeys(ids, False)
         for obj in self.browse(cr, uid, ids, context=context):
             result[obj.id] = tools.image_get_resized_images(obj.image)
